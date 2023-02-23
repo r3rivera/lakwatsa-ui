@@ -5,10 +5,12 @@
     "ng": "ng",
     "start": "ng serve",
     "start:server": "node dist/server-resource/server.js",
+    "build:all": "npm run clean && npm run build:ui && npm run build:server",
     "build:ui": "ng build",
     "build:server": "tsc --project tsconfig.server.json ",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "clean": "rm -rf dist"
   },
   "private": true,
   "dependencies": {
