@@ -2,8 +2,7 @@ import { Component } from "@angular/core";
 
 @Component({
     selector: 'r2r-login',
-    template: `<h1>Login Component</h1>
-               <div>{{pageTitle}}</div>`,
+    templateUrl: 'login.component.html',
     styleUrls: ['./login.component.scss']
   })
 export class LoginComponent{
