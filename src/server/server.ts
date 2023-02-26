@@ -12,9 +12,6 @@ async function bootstrap() {
    */
 
   const staticPath = join(__dirname, '../', 'ui-resources');
-  console.log(`Root Directory Name :: ${__dirname}`);
-  console.log(`Updated Static Directory Name :: ${staticPath}`);
-
   app.use('/', expressStaticGzip(staticPath,{
     enableBrotli: true,
     orderPreference: ['br'],
@@ -31,6 +28,9 @@ async function bootstrap() {
   await app.listen(3000);
   const httpServer = await app.getHttpServer();
   const serverAddress = (await httpServer.address()) as AddressInfo;
+
+  console.log(`Root Directory Name :: ${__dirname}`);
+  console.log(`Updated Static Directory Name :: ${staticPath}`);
   console.info(
       `NestJS Server is listening on ${serverAddress.address}:${serverAddress.port}`
   );
