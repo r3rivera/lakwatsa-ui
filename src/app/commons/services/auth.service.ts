@@ -1,5 +1,6 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
+import { Observable } from "rxjs";
 import { AuthClientUser } from "./../../../shared/models/authclient-user.model";
 
 @Injectable({
@@ -9,8 +10,9 @@ export class AuthService{
 
     constructor(private _httpClient: HttpClient){}
 
-    authenticateUser(user: AuthClientUser){
+    authenticateUser(user: AuthClientUser):Observable<any>{
         console.log("AuthService Angular....");
-        console.log(user);
+        return this._httpClient.post("auth",{...user});
+
     }
 }

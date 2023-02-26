@@ -9,9 +9,10 @@ export class AuthController{
 
 
     @Post(ApiEndpoint.AUTH_API)
-    getAuth(@Body() authUser:any){
+    getAuth(@Body() authUser:any):{}{
         console.info("AUTH LOGIN");
         console.info(authUser);
+        return { message :"Token-123"};
     }
 
 }

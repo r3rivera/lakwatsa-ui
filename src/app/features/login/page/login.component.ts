@@ -20,7 +20,11 @@ export class LoginComponent{
         password:"test123",
         email:"test@test.com"
       }
-      this._authUser.authenticateUser(user);
+      this._authUser.authenticateUser(user).subscribe(resp => {
+        console.log("Handling Response...");
+        console.log(JSON.stringify(resp));
+
+      });
     }
 
 }
