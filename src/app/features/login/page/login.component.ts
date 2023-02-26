@@ -7,6 +7,12 @@ import { Component } from "@angular/core";
   })
 export class LoginComponent{
 
-    pageTitle:string = "Welcome to login page";
+    signInMsg:string = "Sign in"
+    forgotPasswordMsg:string = "Forgot your password?";
+
+
+    onSignIn(){
+      console.log("Signing in!");
+    }
 
 }
