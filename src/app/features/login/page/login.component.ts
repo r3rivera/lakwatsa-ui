@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { AuthService } from "./../../../commons/services/auth.service";
 
 @Component({
     selector: 'r2r-login',
@@ -7,12 +8,19 @@ import { Component } from "@angular/core";
   })
 export class LoginComponent{
 
+    constructor(private _authUser:AuthService){}
+
     signInMsg:string = "Sign in"
     forgotPasswordMsg:string = "Forgot your password?";
 
 
     onSignIn(){
-      console.log("Signing in!");
+      let user = {
+        username:"test000",
+        password:"test123",
+        email:"test@test.com"
+      }
+      this._authUser.authenticateUser(user);
     }
 
 }
