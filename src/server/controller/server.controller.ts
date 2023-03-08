@@ -8,6 +8,7 @@ import { join } from 'path';
 export class ServerController {
   constructor() {}
 
+  
   @All('*')
   @Header('Content-Type', 'text/html')
   root(@Req() request:{}, @Res() response: Response): void {
