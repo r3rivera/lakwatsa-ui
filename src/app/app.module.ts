@@ -20,7 +20,11 @@ import { SharedModule } from './features/shared/shared.module';
     LoginModule,
     AppointmentRoutingModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  providers: [
+    {
+      provide: Window, useValue: window
+    }
+  ],
 })
 export class AppModule { }

@@ -5,10 +5,12 @@ import { AuthUserGuard } from './commons/guards/auth-user.gurard';
 
 const routes: Routes = [
   { path: 'appointment', 
-    canActivate: [AuthUserGuard],
+    canActivateChild: [AuthUserGuard],
     loadChildren: () => import('./features/appointment/appointment.module').then(m => m.AppointmentModule)},
-  { path: 'login', loadChildren: () => import('./features/login/login.module').then( m => m.LoginModule)},
-  { path: '', loadChildren: () => import('./features/welcome/welcome.module').then( m => m.WelcomeModule)}
+  { path: 'login', 
+    loadChildren: () => import('./features/login/login.module').then( m => m.LoginModule)},
+  { path: '', 
+    loadChildren: () => import('./features/welcome/welcome.module').then( m => m.WelcomeModule)}
 
 ];
 
