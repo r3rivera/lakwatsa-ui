@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { LoginModule } from './features/login/login.module';
 import { AppointmentRoutingModule } from './features/appointment/appointment-routing.module';
 import { SharedModule } from './features/shared/shared.module';
+import { AppInterceptorProviders } from './commons/interceptors';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { SharedModule } from './features/shared/shared.module';
   providers: [
     {
       provide: Window, useValue: window
-    }
+    },
+    AppInterceptorProviders
   ],
 })
 export class AppModule { }
