@@ -3,11 +3,14 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "nodemon --inspect --delay 2 --watch src --watch dist dist/server-resource/server.js",
+    "start:watch": "npm-run-all clean --parallel build:ui:watch build:server:watch start",
     "start:server": "node dist/server-resource/server.js",
     "build:all": "npm run clean && npm run build:ui && npm run build:server",
     "build:ui": "ng build && bread-compressor dist/ui-resources",
+    "build:ui:watch": "ng build --watch && bread-compressor dist/ui-resources",
     "build:server": "tsc --project tsconfig.server.json ",
+    "build:server:watch": "tsc --project tsconfig.server.json --watch",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "clean": "rm -rf dist"
