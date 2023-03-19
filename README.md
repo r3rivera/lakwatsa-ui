@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Run `npm run start:watch` to build both the UI and Server and start it. Navigate to `http://localhost:3000/`. The application will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
@@ -12,11 +12,11 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Run `npm run build:all` to build the project - ui and server. The build artifacts will be stored in the `dist/` directory.
 
 ## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Run `npm run test` to execute the unit tests via [JEST](https://jestjs.io/).
 
 ## Running end-to-end tests
 
