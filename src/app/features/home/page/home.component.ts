@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { Router } from "@angular/router";
+import { ActivatedRoute, Router } from "@angular/router";
 import { Compare } from "./../../../../app/commons/util/compare.uti";
 
 @Component({
@@ -9,10 +9,10 @@ import { Compare } from "./../../../../app/commons/util/compare.uti";
   })
 export class HomeComponent{
 
-    pageTitle:string = "Welcome to home page";
+    pageTitle:string = "Welcome to home component page";
 
 
-    constructor(private readonly _router:Router){}
+    constructor(private readonly _router:Router, private readonly _route:ActivatedRoute){}
 
     private oldJson = {
                 preferences : ['ALERT','BANK','BUY','SELL']};
@@ -20,6 +20,6 @@ export class HomeComponent{
 
     public onGetStarted():void{
       console.log(Compare.isEqual(this.oldJson, this.updJson));
-      this._router.navigate(['login']);
+      this._router.navigate(['/login']);
     }
 }

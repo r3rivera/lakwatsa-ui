@@ -1,6 +1,7 @@
+import { CommonModule } from "@angular/common";
 import { HttpClientModule } from "@angular/common/http";
 import { NgModule } from "@angular/core";
-import { BrowserModule } from "@angular/platform-browser";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { HomeRoutingModule } from "./home-routing.module";
 import { HomeComponent } from "./page/home.component";
 
@@ -9,9 +10,10 @@ import { HomeComponent } from "./page/home.component";
       HomeComponent
     ],
     imports: [
-      BrowserModule,
+      CommonModule,
+      FormsModule,
+      ReactiveFormsModule,
       HttpClientModule,
-      
       HomeRoutingModule
     ],
     providers: [],

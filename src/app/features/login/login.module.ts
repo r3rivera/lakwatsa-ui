@@ -1,6 +1,7 @@
+import { CommonModule } from "@angular/common";
 import { HttpClientModule } from "@angular/common/http";
 import { NgModule } from "@angular/core";
-import { BrowserModule } from "@angular/platform-browser";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { LoginRoutingModule } from "./login-routing.module";
 import { LoginComponent } from "./page/login.component";
 
@@ -9,9 +10,11 @@ import { LoginComponent } from "./page/login.component";
       LoginComponent
     ],
     imports: [
+      CommonModule,
+      FormsModule,
+      ReactiveFormsModule,
+      HttpClientModule,
       LoginRoutingModule,
-      BrowserModule,
-      HttpClientModule
     ],
     providers: [],
     bootstrap: [LoginComponent]
