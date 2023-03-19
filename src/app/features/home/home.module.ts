@@ -11,6 +11,7 @@ import { HomeComponent } from "./page/home.component";
     imports: [
       BrowserModule,
       HttpClientModule,
+      
       HomeRoutingModule
     ],
     providers: [],

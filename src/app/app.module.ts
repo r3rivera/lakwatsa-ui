@@ -4,6 +4,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginModule } from './features/login/login.module';
+import { ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -11,6 +13,8 @@ import { LoginModule } from './features/login/login.module';
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
+    RouterModule,
     AppRoutingModule,
     HttpClientModule,
     LoginModule
